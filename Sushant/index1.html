@@ -1,0 +1,947 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Sushant |UI/UX Developer & AI/ML Engineer</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/png" href="images/pic10.jpg">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+		<style>
+			:root {
+				--ai-primary: #0a0f1e;
+				--ai-accent: #00d4ff;
+				--ai-accent2: #0066ff;
+				--ai-surface: #0d1a2e;
+				--ai-card: #111d33;
+				--ai-border: rgba(0, 212, 255, 0.15);
+				--ai-glow: 0 0 20px rgba(0, 212, 255, 0.2);
+				--font-display: 'Space Mono', monospace;
+				--font-body: 'DM Sans', sans-serif;
+			}
+
+			/* ── Global Overrides ── */
+			body {
+				
+        font-family: 'Outfit', sans-serif;
+				
+			}
+
+			/* ── NAV ── */
+			#nav {
+				background: rgba(10, 15, 30, 0.95);
+				backdrop-filter: blur(12px);
+				border-bottom: 1px solid var(--ai-border);
+				box-shadow: 0 2px 20px rgba(0,0,0,0.4);
+			}
+			#nav ul li a {
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.72rem;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: #a0b4cc;
+				transition: color 0.25s, text-shadow 0.25s;
+				padding: 0.6em 1em;
+			}
+			#nav ul li a:hover,
+			#nav ul li a.active {
+				color: var(--ai-accent);
+				text-shadow: 0 0 12px rgba(0,212,255,0.5);
+			}
+
+			/* ── HOME SECTION ── */
+			#top.wrapper.style1 {
+				background: linear-gradient(135deg, #06090f 0%, #0a1628 40%, #061424 100%);
+				position: relative;
+				overflow: hidden;
+				padding: 6em 0;
+			}
+			#top.wrapper.style1::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background:
+					radial-gradient(ellipse 60% 50% at 80% 50%, rgba(0,102,255,0.12) 0%, transparent 70%),
+					radial-gradient(ellipse 40% 40% at 20% 80%, rgba(0,212,255,0.07) 0%, transparent 60%);
+				pointer-events: none;
+			}
+			#top.wrapper.style1::after {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background-image:
+					linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
+					linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
+				background-size: 60px 60px;
+				pointer-events: none;
+			}
+			.profile-wrapper {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.profile-circle {
+				width: 195px;
+				height: 200px;
+				border-radius: 50%;
+				border: 4px solid var(--ai-accent);
+				box-shadow: 0 0 0 6px rgba(0,212,255,0.08), 0 0 40px rgba(0,212,255,0.25);
+				overflow: hidden;
+				background: linear-gradient(135deg, #edf4ff, #f5f7fb);
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				position: relative;
+				animation: profilePulse 3s ease-in-out infinite;
+			}
+			.profile-circle svg {
+				width: 120px;
+				height: 120px;
+				opacity: 0.7;
+			}
+			@keyframes profilePulse {
+				0%, 100% { box-shadow: 0 0 0 6px rgba(0,212,255,0.08), 0 0 40px rgba(0,212,255,0.25); }
+				50% { box-shadow: 0 0 0 8px rgba(0,212,255,0.14), 0 0 60px rgba(0,212,255,0.35); }
+			}
+			#top header h1 {
+				font-family: 'Outfit', sans-serif;
+				font-size: 2.4rem;
+				color: #f0f6ff;
+				letter-spacing: -0.01em;
+				margin-bottom: 0.3em;
+				line-height: 1.2;
+			}
+			#top header h1 strong {
+				color: var(--ai-accent);
+				text-shadow: 0 0 20px rgba(0,212,255,0.4);
+			}
+			.ai-headline {
+				font-family: 'Outfit', sans-serif;
+				font-weight: 500;
+				font-size: 1.05rem;
+				color: var(--ai-accent);
+				letter-spacing: 0.04em;
+				margin-bottom: 1em;
+				display: flex;
+				align-items: center;
+				gap: 0.5em;
+				flex-wrap: wrap;
+			}
+			.ai-headline span {
+				color: rgba(0,212,255,0.4);
+				font-size: 0.8em;
+			}
+			.home-intro {
+				color: #8899bb;
+				font-size: 1rem;
+				line-height: 1.75;
+				max-width: 520px;
+				margin-bottom: 2em;
+			}
+			.home-buttons {
+				display: flex;
+				gap: 0.8em;
+				flex-wrap: wrap;
+			}
+			.btn-primary {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4em;
+				background: linear-gradient(135deg, var(--ai-accent2), var(--ai-accent));
+				color: #fff;
+				padding: 0.75em 1.5em;
+				border-radius: 4px;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.75rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				font-weight: 700;
+				border: none;
+				cursor: pointer;
+				transition: transform 0.2s, box-shadow 0.2s;
+				text-decoration: none;
+				box-shadow: 0 4px 20px rgba(0,102,255,0.35);
+			}
+			.btn-primary:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 30px rgba(0,212,255,0.45);
+				color: #fff;
+			}
+			.btn-outline {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4em;
+				background: transparent;
+				color: #ffffff;
+				padding: 0.73em 1.4em;
+				border-radius: 4px;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.75rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				font-weight: 700;
+				border: 1px solid rgba(0,212,255,0.4);
+				cursor: pointer;
+				transition: transform 0.2s, box-shadow 0.2s, background 0.2s, border-color 0.2s;
+				text-decoration: none;
+			}
+			.btn-outline:hover {
+				transform: translateY(-2px);
+				background: rgba(0,212,255,0.08);
+				border-color: var(--ai-accent);
+				box-shadow: 0 4px 20px rgba(0,212,255,0.2);
+				color: var(--ai-accent);
+			}
+
+			/* ── SKILLS SECTION ── */
+			#work.wrapper.style2 {
+				background: var(--ai-surface);
+				border-top: 1px solid var(--ai-border);
+				border-bottom: 1px solid var(--ai-border);
+				padding: 5em 0;
+			}
+			#work header h2 {
+				font-family: 'Outfit', sans-serif;
+				color: #e8f2ff;
+				font-size: 1.9rem;
+				letter-spacing: -0.01em;
+			}
+			#work header p {
+				color: #6680a0;
+				font-size: 1rem;
+			}
+			.section-tag {
+				display: inline-block;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.65rem;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				color: var(--ai-accent);
+				background: rgba(0,212,255,0.08);
+				border: 1px solid rgba(0,212,255,0.2);
+				padding: 0.3em 0.9em;
+				border-radius: 2px;
+				margin-bottom: 0.8em;
+			}
+			.skill-box {
+				background: var(--ai-card);
+				border: 1px solid var(--ai-border);
+				border-radius: 8px;
+				padding: 2em 1.5em;
+				text-align: center;
+				transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+				position: relative;
+				overflow: hidden;
+				height: 100%;
+			}
+			.skill-box::before {
+				content: '';
+				position: absolute;
+				top: 0; left: 0; right: 0;
+				height: 2px;
+				background: linear-gradient(90deg, transparent, var(--ai-accent), transparent);
+				opacity: 0;
+				transition: opacity 0.3s;
+			}
+			.skill-box:hover {
+				transform: translateY(-6px);
+				box-shadow: var(--ai-glow), 0 12px 40px rgba(0,0,0,0.4);
+				border-color: rgba(0,212,255,0.35);
+			}
+			.skill-box:hover::before { opacity: 1; }
+			.skill-icon {
+				width: 56px;
+				height: 56px;
+				background: linear-gradient(135deg, rgba(0,102,255,0.2), rgba(0,212,255,0.15));
+				border: 1px solid rgba(0,212,255,0.25);
+				border-radius: 12px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				margin: 0 auto 1em;
+				font-size: 1.4rem;
+				color: var(--ai-accent);
+				transition: transform 0.25s;
+			}
+			.skill-box:hover .skill-icon { transform: scale(1.1); }
+			.skill-box h3 {
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.85rem;
+				color: #d0e4f8;
+				letter-spacing: 0.03em;
+				margin-bottom: 0.6em;
+			}
+			.skill-box p {
+				color: #5a7090;
+				font-size: 0.88rem;
+				line-height: 1.6;
+				margin: 0;
+			}
+			.skill-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.35em;
+				justify-content: center;
+				margin-top: 1em;
+			}
+			.skill-tag {
+				font-size: 0.68rem;
+				font-family: 'Outfit', sans-serif;
+				background: rgba(0,212,255,0.07);
+				border: 1px solid rgba(0,212,255,0.15);
+				color: #4a9ebb;
+				padding: 0.2em 0.6em;
+				border-radius: 3px;
+				letter-spacing: 0.05em;
+			}
+
+			/* ── PROJECTS SECTION ── */
+			#portfolio.wrapper.style3 {
+				background: linear-gradient(180deg, #06090f 0%, #080e1c 100%);
+				padding: 5em 0;
+			}
+			#portfolio header h2 {
+				font-family: 'Outfit', sans-serif;
+				color: #e8f2ff;
+				font-size: 1.9rem;
+			}
+			#portfolio header p { color: #6680a0; }
+			.project-card {
+				background: var(--ai-card);
+				border: 1px solid var(--ai-border);
+				border-radius: 10px;
+				overflow: hidden;
+				transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+				display: flex;
+				flex-direction: column;
+				height: 100%;
+			}
+			.project-card:hover {
+				transform: translateY(-8px);
+				box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 30px rgba(0,212,255,0.12);
+				border-color: rgba(0,212,255,0.3);
+			}
+			.project-img {
+				width: 100%;
+				aspect-ratio: 16/9;
+				object-fit: cover;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(135deg, #0a1628, #0d2040);
+				border-bottom: 1px solid var(--ai-border);
+				position: relative;
+				overflow: hidden;
+			}
+			.project-img-inner {
+				width: 100%;
+				aspect-ratio: 16/9;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: linear-gradient(135deg, #0a1628, #0d2040);
+				border-bottom: 1px solid var(--ai-border);
+				position: relative;
+				overflow: hidden;
+			}
+			.project-img-inner::before {
+				content: '';
+				position: absolute;
+				inset: 0;
+				background-image:
+					linear-gradient(rgba(0,212,255,0.04) 1px, transparent 1px),
+					linear-gradient(90deg, rgba(0,212,255,0.04) 1px, transparent 1px);
+				background-size: 30px 30px;
+			}
+			.project-img-icon {
+				font-size: 3rem;
+				color: rgba(0,212,255,0.25);
+				position: relative;
+				z-index: 1;
+			}
+			.project-content {
+				padding: 1.5em;
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+			}
+			.project-content h3 {
+				font-family: 'Outfit', sans-serif;
+				color: #d8eaff;
+				font-size: 1rem;
+				margin-bottom: 0.6em;
+				letter-spacing: 0.01em;
+			}
+			.project-content p {
+				color: #5a7090;
+				font-size: 0.88rem;
+				line-height: 1.65;
+				flex: 1;
+			}
+			.tech-badges {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.35em;
+				margin: 1em 0;
+			}
+			.tech-badge {
+				font-size: 0.65rem;
+				font-family: 'Outfit', sans-serif;
+				background: rgba(0,102,255,0.12);
+				border: 1px solid rgba(0,102,255,0.25);
+				color: #6699ff;
+				padding: 0.2em 0.65em;
+				border-radius: 3px;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+			}
+			.project-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.4em;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.7rem;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: #ffffff;
+				border: 1px solid rgba(0,212,255,0.3);
+				padding: 0.5em 1em;
+				border-radius: 3px;
+				text-decoration: none;
+				transition: background 0.2s, box-shadow 0.2s;
+				margin-top: auto;
+				align-self: flex-start;
+			}
+			.project-link:hover {
+				background: rgba(0,212,255,0.1);
+				box-shadow: 0 0 15px rgba(0,212,255,0.2);
+				color: var(--ai-accent);
+			}
+
+			/* ── TIMELINE SECTION ── */
+			#approach {
+				background: var(--ai-surface);
+				padding: 5em 0;
+				border-top: 1px solid var(--ai-border);
+				border-bottom: 1px solid var(--ai-border);
+			}
+			#approach header h2 {
+				font-family: 'Outfit', sans-serif;
+				color: #e8f2ff;
+				font-size: 1.9rem;
+				text-align: center;
+				margin-bottom: 0.3em;
+			}
+			#approach header p {
+				color: #6680a0;
+				text-align: center;
+				margin-bottom: 3em;
+			}
+			.timeline {
+				display: flex;
+				justify-content: center;
+				align-items: flex-start;
+				gap: 0;
+				flex-wrap: nowrap;
+				position: relative;
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.timeline-item {
+				flex: 1;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				position: relative;
+			}
+			.timeline-item:not(:last-child)::after {
+				content: '';
+				position: absolute;
+				top: 28px;
+				left: 50%;
+				width: 100%;
+				height: 2px;
+				background: linear-gradient(90deg, var(--ai-accent), rgba(0,212,255,0.2));
+				z-index: 0;
+			}
+			.timeline-dot {
+				width: 56px;
+				height: 56px;
+				background: linear-gradient(135deg, var(--ai-accent2), var(--ai-accent));
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 1.2rem;
+				color: #fff;
+				margin-bottom: 1em;
+				position: relative;
+				z-index: 1;
+				box-shadow: 0 0 20px rgba(0,212,255,0.35);
+				flex-shrink: 0;
+			}
+			.timeline-label {
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.72rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				color: var(--ai-accent);
+				margin-bottom: 0.4em;
+			}
+			.timeline-desc {
+				font-size: 0.8rem;
+				color: #5a7090;
+				line-height: 1.5;
+				padding: 0 0.5em;
+			}
+			@media (max-width: 768px) {
+				.timeline {
+					flex-direction: column;
+					align-items: center;
+					gap: 2em;
+				}
+				.timeline-item:not(:last-child)::after {
+					top: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+					width: 2px;
+					height: 2em;
+					background: linear-gradient(180deg, var(--ai-accent), rgba(0,212,255,0.2));
+				}
+			}
+
+			/* ── CONTACT SECTION ── */
+			#contact.wrapper.style4 {
+				background: linear-gradient(180deg, #06090f, #080c18);
+				border-top: 1px solid var(--ai-border);
+				padding: 5em 0;
+			}
+			#contact header h2 {
+				font-family: 'Outfit', sans-serif;
+				color: #e8f2ff;
+				font-size: 1.7rem;
+			}
+			#contact header p { color: #6680a0; }
+			#contact form input,
+			#contact form textarea {
+				background: var(--ai-card);
+				border: 1px solid rgba(0,212,255,0.15);
+				color: #c0d8f0;
+				border-radius: 4px;
+				font-family: 'Outfit', sans-serif;
+				transition: border-color 0.2s, box-shadow 0.2s;
+			}
+			#contact form input:focus,
+			#contact form textarea:focus {
+				border-color: rgba(0,212,255,0.5);
+				box-shadow: 0 0 15px rgba(0,212,255,0.1);
+				outline: none;
+			}
+			#contact form input::placeholder,
+			#contact form textarea::placeholder { color: #3a5070; }
+			#contact form input[type="submit"] {
+				background: linear-gradient(135deg, var(--ai-accent2), var(--ai-accent));
+				color: #fff;
+				border: none;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.75rem;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				cursor: pointer;
+				transition: transform 0.2s, box-shadow 0.2s;
+				box-shadow: 0 4px 20px rgba(0,102,255,0.3);
+			}
+			#contact form input[type="submit"]:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 30px rgba(0,212,255,0.4);
+			}
+			#contact form input[type="reset"] {
+				background: transparent;
+				border: 1px solid rgba(0,212,255,0.25);
+				color: #4a7090;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.75rem;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+			}
+			#contact form input[type="reset"]:hover {
+				border-color: rgba(0,212,255,0.5);
+				color: var(--ai-accent);
+			}
+			.social-connect {
+				display: flex;
+				justify-content: center;
+				gap: 1em;
+				margin: 1.5em 0;
+				flex-wrap: wrap;
+			}
+
+
+			.containers {
+            width: 100%;
+            height: 250px;
+            border: 5px solid #fffdfd;
+            overflow: hidden; /* Ensures nothing spills out */
+        }
+
+        /* 2. Make the image fill the container */
+        .containers img {
+            width: 100%;
+            height: 100%;
+            /* 'cover' maintains aspect ratio while filling the box */
+            object-fit: cover; 
+            /* 'center' ensures the middle of the image is visible */
+            object-position: center;}
+
+			.social-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 0.6em;
+				background: var(--ai-card);
+				border: 1px solid var(--ai-border);
+				color: #ffffff;
+				padding: 0.65em 1.2em;
+				border-radius: 4px;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.7rem;
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				text-decoration: none;
+				transition: border-color 0.2s, color 0.2s, box-shadow 0.2s, transform 0.2s;
+			}
+			.social-link:hover {
+				border-color: var(--ai-accent);
+				color: var(--ai-accent);
+				box-shadow: 0 4px 20px rgba(0,212,255,0.15);
+				transform: translateY(-2px);
+			}
+			.social-link i { font-size: 1rem; }
+			hr { border-color: rgba(0,212,255,0.1); }
+			#copyright { display: none; }
+
+			/* ── Footer ── */
+			.custom-footer {
+				text-align: center;
+				padding-top: 1.5em;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.65rem;
+				letter-spacing: 0.12em;
+				color: #2a3a50;
+				text-transform: uppercase;
+			}
+			.custom-footer span {
+				color: var(--ai-accent);
+				opacity: 0.6;
+			}
+
+			/* ── Misc ── */
+			.wrapper.style2 footer,
+			.wrapper.style3 footer {
+				text-align: center;
+				margin-top: 3em;
+			}
+			.wrapper.style2 footer p,
+			.wrapper.style3 footer p { color: #4a6080; }
+
+			/* Scrolly button style override */
+			a.button.large.scrolly {
+				background: transparent;
+				border: 1px solid rgba(0,212,255,0.3);
+				color: #ffffff;
+				font-family: 'Outfit', sans-serif;
+				font-size: 0.72rem;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				border-radius: 3px;
+				padding: 0.8em 1.8em;
+				transition: background 0.2s, box-shadow 0.2s;
+			}
+			a.button.large.scrolly:hover {
+				background: rgba(0,212,255,0.08);
+				box-shadow: 0 0 20px rgba(0,212,255,0.2);
+			}
+
+			/* Row spacing fix */
+			.row > .col-4, .row > .col-6-medium, .row > .col-12-small {
+				margin-bottom: 1.5em;
+			}
+
+			/* Animate-in on scroll (simple) */
+			@keyframes fadeUp {
+				from { opacity: 0; transform: translateY(24px); }
+				to { opacity: 1; transform: translateY(0); }
+			}
+			.skill-box, .project-card, .timeline-item {
+				animation: fadeUp 0.5s ease both;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul class="container">
+				<li><a href="#top">Top</a></li>
+				<li><a href="#work">Skills</a></li>
+				<li><a href="#portfolio">Projects</a></li>
+				<li><a href="#approach">Approach</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- Home -->
+		<article id="top" class="wrapper style1">
+			<div class="container">
+				<div class="row aln-middle">
+					<div class="col-4 col-5-large col-12-medium">
+						<div class="profile-wrapper">
+							<div class="profile-circle">
+									<img src="images/pic10.jpg" class="containers">
+									<circle cx="50" cy="35" r="20" fill="rgba(0,212,255,0.2)" stroke="rgba(0,212,255,0.4)" stroke-width="1.5"/>
+									<ellipse cx="50" cy="80" rx="30" ry="18" fill="rgba(0,212,255,0.12)" stroke="rgba(0,212,255,0.3)" stroke-width="1.5"/>
+								</svg>
+							</div>
+						</div>
+					</div>
+					<div class="col-8 col-7-large col-12-medium">
+						<header>
+							<h1>Hi, I'm <strong>Sushant</strong>.</h1>
+						</header>
+						<p class="ai-headline">
+							AI/ML Engineer <span>|</span> UI/UX Developer <span>|</span> Data Analyst
+						</p>
+						<p class="home-intro">
+							Final-year Computer Science (AI) student building real-world AI systems including computer vision pipelines, OMR automation systems, and depth estimation models. Passionate about applied AI R&D and designing intuitive AI-powered products.
+						</p>
+						<div class="home-buttons">
+							<a href="https://github.com/SUSHANTSUSHANT-cyber" class="btn-primary scrolly" target="_blank">
+								<i class="fa fa-code"></i> View Projects
+							</a>
+							<a href="assets/Sushant_resume.pdf" downlaod="Sushant Resume" class="btn-outline" target ="_blank" title="Sushant's Resume">
+								<i class="fa fa-download"></i> Download Resume
+							</a>
+							<a href="#contact" class="btn-outline scrolly">
+								<i class="fa fa-envelope"></i> Contact Me
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<!-- Skills -->
+		<article id="work" class="wrapper style2">
+			<div class="container">
+				<header>
+					<p class="section-tag">What I Work With</p>
+					<h2>Core Expertise</h2>
+					<p>A focused skill set spanning from UI/UX to full AI/ML engineering stack — from data to deployment.</p>
+				</header>
+				<div class="row aln-stretch">
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="skill-box">
+							<div class="skill-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+							<h3>UI/UX Understanding</h3>
+							<p>Designing usable, accessible AI product interfaces with human-centered thinking.</p>
+							<div class="skill-tags">
+								<span class="skill-tag">Wireframes</span>
+								<span class="skill-tag">Dashboards</span>
+								<span class="skill-tag">Usability</span>
+							</div>
+						</section>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="skill-box">
+							<div class="skill-icon"><i class="fa-solid fa-brain"></i></div>
+							<h3>AI &amp; Machine Learning</h3>
+							<p>Designing and training models for classification, regression, and deep learning tasks.</p>
+							<div class="skill-tags">
+								<span class="skill-tag">Python</span>
+								<span class="skill-tag">scikit-learn</span>
+								<span class="skill-tag">PyTorch</span>
+							</div>
+						</section>
+					</div>
+					
+					<div class="col-4 col-6-medium col-12-small">
+						<section class="skill-box">
+							<div class="skill-icon"><i class="fa-solid fa-chart-line"></i></div>
+							<h3>Data Science</h3>
+							<p>Extracting insights from raw data through exploration, cleaning, and visualization.</p>
+							<div class="skill-tags">
+								<span class="skill-tag">pandas</span>
+								<span class="skill-tag">NumPy</span>
+								<span class="skill-tag">Preprocessing</span>
+							</div>
+						</section>
+					</div>
+			
+
+										
+				</div>
+
+				<footer>
+					<p>Turning complex AI concepts into working, deployable systems.</p>
+					<a href="#portfolio" class="button large scrolly">See my featured projects</a>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Projects -->
+		<article id="portfolio" class="wrapper style3">
+			<div class="container">
+				<header>
+					<p class="section-tag">What I've Built</p>
+					<h2>Featured Projects</h2>
+					<p>Real-world AI systems built end-to-end — from research to deployment.</p>
+				</header>
+				<div class="row">
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="project-card">
+							<div class="project-img-inner">
+								<img src="images/pic01.jpeg" style="width: 400px; height: 225px; object-fit: cover;">
+							</div>
+							<div class="project-content">
+								<h3>Go GO Ride &amp; Figma UI</h3>
+								<p>Prototype designed using Figma for Go GO Ride, a ride-sharing app focused on safety and reliability. The design emphasizes user-friendly navigation, real-time tracking, and seamless booking experience.</p>
+								<div class="tech-badges">
+									<span class="tech-badge">Figma</span>
+									<span class="tech-badge">UI/UX principles</span>
+									<span class="tech-badge">Wireframing</span>
+									<span class="tech-badge">Prototyping</span>
+								</div>
+								<a href="https://www.figma.com/design/i6ZR7DiZZfksdob5c7gInI/GO-GO-RIDE---App-for-sharing-car--Community-?node-id=1813-1449&t=85ujwCDpPJGUyAD5-1" class="project-link" target="_blank">
+									<i class="fa-brands fa-github"></i> Have a look 
+								</a>
+							</div>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="project-card">
+							<div class="project-img-inner">
+								<img src="images/omr.png" style="width: 400px; height: 225px; ">
+							</div>
+							<div class="project-content">
+								<h3>OMR Scanner &amp; Evaluator</h3>
+								<p>AI-powered OMR system using OpenCV contour detection and adaptive thresholding with a FastAPI backend and Streamlit UI for automated answer sheet evaluation.</p>
+								<div class="tech-badges">
+									<span class="tech-badge">OpenCV</span>
+									<span class="tech-badge">FastAPI</span>
+									<span class="tech-badge">Streamlit</span>
+									<span class="tech-badge">Python</span>
+								</div>
+								<a href="#" class="project-link">
+									<i class="fa-brands fa-github"></i> Have a look
+								</a>
+							</div>
+						</article>
+					</div>
+					<div class="col-4 col-6-medium col-12-small">
+						<article class="project-card">
+							<div class="project-img-inner">
+								<img src="images/Ai.png" style="width: 400px; height: 225px; ">
+							</div>
+							<div class="project-content">
+								<h3>AI-Based 2D to 3D Image Reconstruction</h3>
+								<p>Depth estimation pipeline using MiDaS Vision Transformers, generating point clouds and surface meshes with Open3D for interactive 3D visualization from single images.</p>
+								<div class="tech-badges">
+									<span class="tech-badge">MiDaS</span>
+									<span class="tech-badge">PyTorch</span>
+									<span class="tech-badge">Open3D</span>
+									<span class="tech-badge">Vision Transformers</span>
+								</div>
+								<a href="#" class="project-link">
+									<i class="fa-brands fa-github"></i> Have a look
+								</a>
+							</div>
+						</article>
+					</div>
+					
+				</div>
+				<footer>
+					<p>More projects available on GitHub.</p>
+					<a href="https://github.com/SUSHANTSUSHANT-cyber" class="button large scrolly" target="_blank">View All on GitHub</a>
+				</footer>
+			</div>
+		</article>
+
+		<!-- AI Approach Timeline -->
+		<article id="approach" class="wrapper" style="background: var(--ai-surface); border-top: 1px solid var(--ai-border); border-bottom: 1px solid var(--ai-border); padding: 5em 0;">
+			<div class="container">
+				<header style="text-align:center; margin-bottom: 3em;">
+					<p class="section-tag" style="display:block; text-align:center;">How I Work</p>
+					<h2 style="font-family: 'Outfit', sans-serif;; color: #e8f2ff; font-size: 1.9rem;">AI &amp; Data Science Approach</h2>
+					<p style="color: #6680a0;">A structured, end-to-end methodology for building reliable AI systems.</p>
+				</header>
+				<div class="timeline">
+					<div class="timeline-item">
+						<div class="timeline-dot"><i class="fa-solid fa-database"></i></div>
+						<div class="timeline-label">01 — Collect</div>
+						<p class="timeline-desc">Data Collection<br><span style="font-size:0.75rem; color:#3a5070;">Sources, scraping, labeling</span></p>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-dot" style="background: linear-gradient(135deg, #0055dd, #0099cc);"><i class="fa-solid fa-filter"></i></div>
+						<div class="timeline-label">02 — Prepare</div>
+						<p class="timeline-desc">Preprocessing<br><span style="font-size:0.75rem; color:#3a5070;">Cleaning, augmentation, features</span></p>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-dot" style="background: linear-gradient(135deg, #0044cc, #0088bb);"><i class="fa-solid fa-microchip"></i></div>
+						<div class="timeline-label">03 — Build</div>
+						<p class="timeline-desc">Model Development<br><span style="font-size:0.75rem; color:#3a5070;">Architecture, training, tuning</span></p>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-dot" style="background: linear-gradient(135deg, #0033bb, #0077aa);"><i class="fa-solid fa-chart-bar"></i></div>
+						<div class="timeline-label">04 — Evaluate</div>
+						<p class="timeline-desc">Evaluation<br><span style="font-size:0.75rem; color:#3a5070;">Metrics, validation, testing</span></p>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-dot" style="background: linear-gradient(135deg, #002299, #006699);"><i class="fa-solid fa-rocket"></i></div>
+						<div class="timeline-label">05 — Ship</div>
+						<p class="timeline-desc">Deployment<br><span style="font-size:0.75rem; color:#3a5070;">API, UI, monitoring</span></p>
+					</div>
+				</div>
+			</div>
+		</article>
+
+		<!-- Contact -->
+		<article id="contact" class="wrapper style4">
+			<div class="container medium">				
+					<div class="col-12">
+						<hr />
+						<h2 style="font-family: 'Outfit', sans-serif;; color: #8099bb; font-size: 0.8rem; letter-spacing: 0.15em; text-transform: uppercase;">Find me on</h2>
+						<div class="social-connect">
+							<a href="https://www.linkedin.com/in/sushant-%E2%80%8E-2211b8330 " class="social-link" target="_blank">
+								<i class="fa-brands fa-linkedin-in"></i> LinkedIn
+							</a>
+							<a href="https://github.com/SUSHANTSUSHANT-cyber" class="social-link" target="_blank">
+								<i class="fa-brands fa-github"></i> GitHub
+							</a>
+							<a href="https://mail.google.com/mail/?view=cm&fs=1&to=ysushant387@gmail.com" target="_blank" class="social-link">
+								<i class="fa-solid fa-envelope"></i> Email
+							</a>
+						</div>
+						<hr />
+					</div>
+				</div>
+				<footer>
+					<p class="custom-footer">
+						© 2026 <span>Sushant</span> · Built with focus on AI &amp; Innovation
+					</p>
+				</footer>
+			</div>
+		</article>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
